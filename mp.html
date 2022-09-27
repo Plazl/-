@@ -3,18 +3,27 @@
   </head>
   <body>
     <div id="1" onclick="switchPage(1)">
-     <p>hi 1</p>
+      <p>hi 1</p>
     </div>
     <div id="2" onclick="switchPage(2)">
      <p>hi 2</p>
+    </div>
+    <div id="2" onclick="switchPage(3)">
+     <p>hi 3</p>
     </div>
     <script src="main.js">
      function switchPage("num") {
       if(num == 1) {
        document.getElementById("1").style.display = "shown"
-        document.getElementById("2").style.display = "hidden"
+       document.getElementById("2").style.display = "hidden"
+       document.getElementById("3").style.display = "hidden" 
       } else if(num == 2) {
        document.getElementById("2").style.display = "shown"
+       document.getElementById("1").style.display = "hidden"
+       document.getElementById("3").style.display = "hidden"
+      } else if(num == 3) {
+       document.getElementById("3").style.display = "shown"
+       document.getElementById("2").style.display = "hidden"
        document.getElementById("1").style.display = "hidden"
       }
      }
