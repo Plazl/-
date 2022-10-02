@@ -1,0 +1,39 @@
+var time1;
+if (time1 == undefined) {time1 = new Date().getTime()}
+var time;
+var testSave;
+setInterval(function() {
+	time = new Date().getTime()})
+var test = {
+  "x":0,
+ "xMult":1,
+ "time1":time1
+}
+var saveData = JSON.parse(localStorage.getItem('testSave'))
+function load() {
+ if (typeof save !== undefined) {
+  if (typeof save.xMult !== undefined) {test.xMult = save.xMult}
+  if (typeof save.time1 !== undefined) {test.time1 = save.time1}
+  if (typeof save.x !== undefined) {test.x = save.x}
+  time -= time1;
+  test.x = (test.x * test.xMult) * time
+ }
+  load()
+}
+function addToX() {
+ test.x += 1 * test.xMult
+}
+var int = 1000
+setInterval(addToX, int)
+function save() {
+ testSave = {
+  "x":test.x,
+  "xMult":test.xMult,
+  "time1":test.time1
+ }
+  localStorage.setItem('testSave', JSON.stringify(testSave))
+}
+function update() {
+   if (time1 == undefined) {time1 = time}
+}                      
+setInterval(update, 1)
