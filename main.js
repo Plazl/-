@@ -15,10 +15,9 @@ function load() {
   if (typeof saveData.xMult !== "undefined") {test.xMult = saveData.xMult}
   if (typeof saveData.time1 !== "undefined") {test.time1 = saveData.time1}
   if (typeof saveData.x !== "undefined") {test.x = saveData.x}
-  time1 -= time;
-  test.x = (test.x * test.xMult) * time
+  var timeGone = time - time1;
+  test.x = (test.x * test.xMult) * timeGone/1000
  }
-  load()
 }
 function addToX() {
  test.x += 1 * test.xMult
@@ -37,3 +36,4 @@ function update() {
    if (time1 == undefined) {time1 = time}
 }                      
 setInterval(update, 1)
+load()
