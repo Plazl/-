@@ -36,4 +36,3 @@ function update() {
    if (time1 == undefined) {time1 = time}
 }                      
 setInterval(update, 1)
-load()
