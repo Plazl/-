@@ -11,10 +11,10 @@ var test = {
 }
 var saveData = JSON.parse(localStorage.getItem('testSave'))
 function load() {
- if (typeof saveData !== undefined) {
-  if (typeof saveData.xMult !== undefined) {test.xMult = saveData.xMult}
-  if (typeof saveData.time1 !== undefined) {test.time1 = saveData.time1}
-  if (typeof saveData.x !== undefined) {test.x = saveData.x}
+ if (typeof saveData !== "undefined") {
+  if (typeof saveData.xMult !== "undefined") {test.xMult = saveData.xMult}
+  if (typeof saveData.time1 !== "undefined") {test.time1 = saveData.time1}
+  if (typeof saveData.x !== "undefined") {test.x = saveData.x}
   time1 -= time;
   test.x = (test.x * test.xMult) * time
  }
