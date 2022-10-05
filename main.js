@@ -37,3 +37,4 @@ function update() {
 	document.getElementById("x").innerHtML = test.x
 }                      
 setInterval(update, 1)
+load();
