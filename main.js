@@ -34,7 +34,7 @@ function save() {
 }
 function update() {
    if (time1 == undefined) {time1 = time}
-   document.getElementById("x").innerHtML = test.x
+   document.getElementById("x").innerHTML = test.x
 }                      
 setInterval(update, 1)
 load();
